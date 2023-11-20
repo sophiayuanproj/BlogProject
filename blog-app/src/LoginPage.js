@@ -22,7 +22,7 @@ export default function LoginPage(){
   }
 
   const createPress = () => {
-    //Redirect to account creation
+    //Communicate with backend to create account
     console.log("create pressed")
   }
 
