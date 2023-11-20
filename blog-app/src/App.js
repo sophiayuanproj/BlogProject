@@ -1,25 +1,47 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export default function App(){
+  return(
+    <div className = "login">
+      <div className = "content">
+        <center>
+        <h1>Welcome back!</h1>
+        </center>
+        <Login />
+      </div>
     </div>
   );
 }
 
-export default App;
+function Login(){
+  return(
+    <div>
+      <center>
+        <form>
+        <label>
+          Email:
+        <input type = "text" name = "email"/>
+        <br></br>
+        <br></br>
+          Password:
+        <input type = "text" name = "password"/>
+        <br></br>
+        <br></br>
+        </label>
+        <SigninButton></SigninButton>
+      </form>
+      </center>
+    </div>
+  );
+}
+
+function SigninButton() {
+  return(
+    <div>
+    <button type = "button">Sign in</button>
+    </div>
+
+  );
+
+}
