@@ -18,7 +18,7 @@ export default function LoginPage(){
   const handleLoginPressed = () =>{
     console.log(user)
     console.log(pass)
-    //Communicate with backend, see if 
+    //Communicate with backend, see if successful login
   }
 
   const createPress = () => {
