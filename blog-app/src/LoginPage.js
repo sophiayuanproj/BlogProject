@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import React, { useState } from 'react';
-// import './App.css';
+// import { Link } from "react-router-dom";
+import axios from 'axios';
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import CreateAccount from './CreateAcc';
 
 export default function LoginPage(){
 
@@ -57,7 +60,7 @@ function Login(props){
         <br></br>
         </label>
         <SigninButton signInPress={signInPress}></SigninButton>
-        <CreateAccount createPress={createPress}></CreateAccount>
+        <CreateButton createPress={createPress}></CreateButton>
       </form>
       </center>
     </div>
@@ -76,15 +79,18 @@ function SigninButton(props) {
   );
 }
 
-function CreateAccount(props) {
+function CreateButton(props) {
+  const { createPress } = props;
 
-  const {createPress} = props
+  const handleClick = () => {
+    window.location.href = '/createaccount';
+  };
 
-  return(
+  return (
     <div>
-      <button type="button" onClick={createPress}>
+      <button type="button" onClick={handleClick}>
         Create Account
       </button>
     </div>
-  )
+  );
 }
