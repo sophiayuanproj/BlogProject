@@ -55,7 +55,7 @@ function Login(props){
         <br></br>
         <br></br>
           Password:
-        <input type = "password" name = "password" onChange={handlePassChange}/>
+        <input type = "text" name = "password" onChange={handlePassChange}/>
         <br></br>
         <br></br>
         </label>
